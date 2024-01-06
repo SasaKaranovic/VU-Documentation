@@ -1,0 +1,36 @@
+name: Build VU1 Documentation
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - run: pip install mkdocs
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+
+      # Upload build artifacts
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: VU1-Documentation
+          path: ${{ github.workspace }}/public_html/*
+        if: ${{ always() }}
+
+      # Deploy docs
+      - name: Copy files via scp
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: public_html/*
+          target: /var/www/docs.vudials.com

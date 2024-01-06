@@ -1,0 +1,125 @@
+site_name: VU Dials Documentation
+site_url: https://docs.vudials.com/
+repo_url: https://docs.vudials.com/
+copyright: VU dials are designed and developed as collaboration between <a href="https://sasakaranovic.com" target="_blank">Sasa Karanovic</a> and <a href="https://streacom.com" target="_blank">Streacom</a>.
+
+nav:
+  - 'Welcome to VU docs': 'index.md'
+  - 'Setting up VU1 dials':
+    - 'Setting up hardware': 'setup_hardware.md'
+    - 'Setting up software': 'setup_software.md'
+    - 'Let''s rock ''n'' roll': 'lets_rnr.md'
+  - 'VU1 Demo App': 'app_demo.md'
+  - 'Web UI':
+    - 'Accessing Web UI': 'webui/webui.md'
+    - 'Manage Dials': 'webui/manage_dials.md'
+    - 'Manage API Keys': 'webui/manage_keys.md'
+  - 'VU Server API':
+    - 'Server Configuration': 'server_config.md'
+    - 'Messaging': 'api_messaging.md'
+    - 'Dial API':
+      - 'List Dials': 'api/dial_list.md'
+      - 'Dial Information': 'api/dial_UID_status.md'
+      - 'Set Value': 'api/dial_UID_set.md'
+      - 'Set Image': 'api/dial_UID_image_set.md'
+      - 'Get Image': 'api/dial_UID_image_get.md'
+      - 'Image CRC': 'api/dial_UID_image_crc.md'
+      - 'Set Backlight': 'api/dial_UID_backlight.md'
+      - 'Set Name': 'api/dial_UID_name.md'
+      - 'Reload HW info': 'api/dial_UID_reload.md'
+      - 'Calibrate': 'api/dial_UID_calibrate.md'
+      - 'Set Dial Easing': 'api/dial_UID_easing_dial.md'
+      - 'Set Backlight Easing': 'api/dial_UID_easing_backlight.md'
+      - 'Get Easing Config': 'api/dial_UID_easing_get.md'
+    - 'Admin API':
+      - 'Provision New Dial(s)': 'api/admin_provision_dials.md'
+      - 'List API Keys': 'api/admin_list_keys.md'
+      - 'Create API Key': 'api/admin_create_key.md'
+      - 'Remove API Key': 'api/admin_remove_key.md'
+      - 'Update API Key': 'api/admin_update_key.md'
+  - 'Source Code': 'https://vudials.com'
+  - 'VU Dials Home': 'https://vudials.com/'
+
+
+# theme: readthedocs
+# theme: material
+
+theme:
+  name: material
+  favicon: images/favicon.png
+  logo: images/logo.png
+  features:
+    - header.autohide
+    - navigation.footer
+    - content.tooltips
+    # - navigation.expand
+  font:
+    text: Rubik
+    code: Ubuntu Mono
+
+  palette:
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch color theme
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch color theme
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch color theme
+
+markdown_extensions:
+  - admonition
+  - nl2br
+  - sane_lists
+  - def_list
+  - pymdownx.details
+  - footnotes
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+    - search
+    - macros
+    - glightbox
+    - autorefs
+
+site_dir: public_html
+
+
+extra:
+  homepage: https://docs.vudials.com
+  social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/sasakaranovic
+
+  cookies:
+    analytics: Matomo
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.

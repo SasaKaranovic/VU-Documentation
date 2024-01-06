@@ -1,0 +1,8 @@
+mkdocs
+mkdocs-enumerate-headings-plugin
+mkdocs-video
+mkdocs-macros-plugin
+mkdocs-glightbox
+mkdocs-autorefs
+mkdocs-material
+mkdocs-material-extensions
