@@ -6,7 +6,7 @@
 </figure>
 
 <center>
-[:fontawesome-solid-floppy-disk: Download page](https://github.com/sasakaranovic/vu1-demo-app){:target="_blank"} - [:fontawesome-brands-square-github: Source code](https://github.com/sasakaranovic/vu1-demo-app){:target="_blank"}
+[:fontawesome-solid-floppy-disk: Download page](https://vudials.com/download/demo_app){:target="_blank"} - [:fontawesome-brands-square-github: Source code](https://github.com/sasakaranovic/vu1-demo-app){:target="_blank"}
 </center>
 
 ## Why the demo app?
