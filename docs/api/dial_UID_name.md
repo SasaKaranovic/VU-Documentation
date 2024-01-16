@@ -1,6 +1,6 @@
 # Set dial name
 
-{{ api_table('Set dial name', 'dial/{DIAL_UID}/image/get', 'GET', ['key', 'name']) }}
+{{ api_table('Set dial name', 'dial/{DIAL_UID}/name', 'GET', ['key', 'name']) }}
 
 Each VU dial has a unique ID (UID) that uniquely identifies each dial.
 These are very helpful internally, but they can be hard to consume by humans.
@@ -23,7 +23,7 @@ This is helpful because it allows easy identification of each dial.
 
 Set/rename dial with UID `3E0075000650564139323920` to `CPU Load`
 
-{{ usage_api_macro('dial/3E0075000650564139323920/image/set', 'POST', {'key':'...', 'name':'CPU Load'}) }}
+{{ usage_api_macro('dial/3E0075000650564139323920/name', 'POST', {'key':'...', 'name':'CPU Load'}) }}
 
 
 Response is a JSON object
