@@ -37,7 +37,7 @@ nav:
       - 'Create API Key': 'api/admin_create_key.md'
       - 'Remove API Key': 'api/admin_remove_key.md'
       - 'Update API Key': 'api/admin_update_key.md'
-  - 'Source Code': 'https://vudials.com'
+  - 'Source Code': 'https://github.com/SasaKaranovic/VU-Server'
   - 'VU Dials Home': 'https://vudials.com/'
 
 
