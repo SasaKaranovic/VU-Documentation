@@ -4,6 +4,8 @@
 
 Set dial image (e-ink image) to provided image file.
 
+Please note that the image file has to be uploaded as `form-data`.
+
 
 ## Sending new image
 
@@ -34,6 +36,8 @@ After the image has been uploaded server will perform CRC32 comparison of binary
 ## Example usage
 
 Set the image of dial with UID `3E0075000650564139323920` to image `my_awesome_image.png`
+
+Please note that `my_awesome_image.png` is the image you will have to upload using `form-data`.
 
 {{ usage_api_macro('dial/3E0075000650564139323920/image/set', 'POST', {'key':'...', 'imgfile':'my_awesome_image.png'}) }}
 
