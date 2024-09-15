@@ -23,7 +23,7 @@ This is helpful because it allows easy identification of each dial.
 
 Set/rename dial with UID `3E0075000650564139323920` to `CPU Load`
 
-{{ usage_api_macro('dial/3E0075000650564139323920/name', 'POST', {'key':'...', 'name':'CPU Load'}) }}
+{{ usage_api_macro('dial/3E0075000650564139323920/name', 'GET', {'key':'...', 'name':'CPU Load'}) }}
 
 
 Response is a JSON object
